@@ -18,6 +18,7 @@ What is the sum of all of the calibration values?
 Your puzzle answer was 56042.
 """
 
+
 def get_sum(inp: str):
     total_sum = 0
     inp_list = inp.splitlines()
@@ -33,9 +34,11 @@ def get_sum(inp: str):
                     first_char = char
                 second_char = char
 
+        # Adding chars and converting them to int works since the numbers are of single digit.
         total_sum += int(first_char + second_char)
-    
+
     return total_sum
+
 
 if __name__ == "__main__":
     import sys
@@ -46,7 +49,7 @@ if __name__ == "__main__":
         # For `python solution.py`, there is one arg.
         print("Enter a input filename as the next argument.")
         exit(1)
-    
+
     filename = args_with_source_code[1]
 
     with open(filename) as f:

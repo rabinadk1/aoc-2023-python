@@ -20,6 +20,7 @@ For each game, find the minimum set of cubes that must have been present.
 What is the sum of the power of these sets?
 """
 
+
 def get_sum_ids(game_inp: str):
     sum_power = 0
     inp_list = game_inp.splitlines()
@@ -39,16 +40,17 @@ def get_sum_ids(game_inp: str):
                 str_num, color = num_color.lstrip().split(" ", maxsplit=1)
 
                 int_num = int(str_num)
-                
+
                 max_rev_dict[color] = max(int_num, max_rev_dict.get(color, 0))
 
         power = 1
         for max_num in max_rev_dict.values():
             power *= max_num
-        
+
         sum_power += power
-    
+
     return sum_power
+
 
 if __name__ == "__main__":
     import sys

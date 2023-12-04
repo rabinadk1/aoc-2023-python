@@ -23,6 +23,7 @@ What is the sum of all of the calibration values?
 Your puzzle answer was 55358.
 """
 
+
 class DigitTracker:
     def __init__(self):
         # Empty initialization
@@ -34,12 +35,13 @@ class DigitTracker:
             self.first_digit = digit
         # Update both digits even if only one number present
         self.second_digit = digit
-    
+
     def get_sum(self):
         return self.first_digit * 10 + self.second_digit
 
 
 dgt_literals = ("one", "two", "three", "four", "five", "six", "seven", "eight", "nine")
+
 
 def get_sum(inp: str):
     total_sum = 0
@@ -60,8 +62,9 @@ def get_sum(inp: str):
                 dgt_tracker.update_dgts(int(char))
 
         total_sum += dgt_tracker.get_sum()
-    
+
     return total_sum
+
 
 if __name__ == "__main__":
     import sys
@@ -72,7 +75,7 @@ if __name__ == "__main__":
         # For python solution.py
         print("Enter a input filename as the next argument.")
         exit(1)
-    
+
     filename = args_with_source_code[1]
 
     with open(filename) as f:
