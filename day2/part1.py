@@ -1,9 +1,8 @@
-"""
-Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+"""Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
 Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
 Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
-Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green.
 
 The Elf would first like to know which games would have been possible if the bag contained only 12 red cubes, 13 green cubes, and 14 blue cubes?
 """
@@ -12,11 +11,9 @@ str_int_dict = dict[str, int]
 
 
 def get_color_num_dict(conf: str):
+    """Parse the conf into a mapping from str to num,
+    conf is in this format: 3 blue, 4 red.
     """
-    Parse the conf into a mapping from str to num,
-    conf is in this format: 3 blue, 4 red
-    """
-
     conf_dict: str_int_dict = {}
 
     # ["3", "blue"]
@@ -66,7 +63,7 @@ if __name__ == "__main__":
     if len(args_with_source_code) != 2:
         # For python solution.py
         print("Enter a input filename as the next argument.")
-        exit(1)
+        sys.exit(1)
 
     # 3 blue, 4 red
     inp_conf = input("Input configuration in this form: x color1, y color2:: ")
@@ -75,7 +72,7 @@ if __name__ == "__main__":
         inp_conf_dict = get_color_num_dict(inp_conf)
     except ValueError:
         print("\nPlease input in this form: 8 green, 6 blue, 20 red")
-        exit(2)
+        sys.exit(2)
 
     filename = args_with_source_code[1]
 

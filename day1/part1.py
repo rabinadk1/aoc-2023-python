@@ -1,5 +1,4 @@
-"""
-On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number.
+"""On each line, the calibration value can be found by combining the first digit and the last digit (in that order) to form a single two-digit number.
 For example:
 
 ```
@@ -48,7 +47,7 @@ if __name__ == "__main__":
     if len(args_with_source_code) != 2:
         # For `python solution.py`, there is one arg.
         print("Enter a input filename as the next argument.")
-        exit(1)
+        sys.exit(1)
 
     filename = args_with_source_code[1]
 

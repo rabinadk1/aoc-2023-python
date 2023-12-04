@@ -1,9 +1,8 @@
-"""
-Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+"""Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
 Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
 Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
 Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
-Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green.
 
 - In game 1, the game could have been played with as few as 4 red, 2 green, and 6 blue cubes.
     If any color had even one fewer cube, the game would have been impossible.
@@ -60,7 +59,7 @@ if __name__ == "__main__":
     if len(args_with_source_code) != 2:
         # For python solution.py
         print("Enter a input filename as the next argument.")
-        exit(1)
+        sys.exit(1)
 
     filename = args_with_source_code[1]
 

@@ -1,5 +1,4 @@
-"""
-Your calculation isn't quite right.
+"""Your calculation isn't quite right.
 It looks like some of the digits are actually spelled out with letters: one, two, three, four, five, six, seven, eight, and nine also count as valid "digits".
 
 Equipped with this new information, you now need to find the real first and last digit on each line.
@@ -25,7 +24,7 @@ Your puzzle answer was 55358.
 
 
 class DigitTracker:
-    def __init__(self):
+    def __init__(self) -> None:
         # Empty initialization
         self.first_digit = None
         self.second_digit = None
@@ -74,7 +73,7 @@ if __name__ == "__main__":
     if len(args_with_source_code) != 2:
         # For python solution.py
         print("Enter a input filename as the next argument.")
-        exit(1)
+        sys.exit(1)
 
     filename = args_with_source_code[1]
 
