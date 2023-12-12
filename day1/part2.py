@@ -29,7 +29,7 @@ class DigitTracker:
         self.first_digit = None
         self.second_digit = None
 
-    def update_dgts(self, digit: int):
+    def update_dgts(self, digit: int) -> None:
         if self.first_digit is None:
             self.first_digit = digit
         # Update both digits even if only one number present

@@ -25,7 +25,7 @@ from typing import Sequence
 
 
 def is_symbol(char: str) -> bool:
-    return not (char == "." or char.isnumeric())
+    return not (char == "." or char.isdecimal())
 
 
 def get_is_top_adj(

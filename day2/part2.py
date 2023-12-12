@@ -18,6 +18,7 @@ Adding up these five powers produces the sum 2286.
 For each game, find the minimum set of cubes that must have been present.
 What is the sum of the power of these sets?
 """
+from __future__ import annotations
 
 
 def get_sum_ids(game_inp: str):
