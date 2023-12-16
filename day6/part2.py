@@ -32,9 +32,8 @@ def get_total_beat_ways(race_sheet: str):
     # upper is floor
     t2 = math.floor((giv_tim + discr) / 2 - num_shift)
 
-    num_beat = t2 - t1 + 1
+    return t2 - t1 + 1
 
-    return num_beat
 
 
 if __name__ == "__main__":

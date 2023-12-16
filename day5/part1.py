@@ -1,8 +1,12 @@
+from __future__ import annotations
+
 import sys
 from typing import Sequence
+
 MapItem = tuple[int, int, int]
 
 MapperType = tuple[MapItem, ...]
+
 
 def get_mappers(blocks: Sequence[str]):
     mappers_list: list[MapperType] = []
@@ -22,6 +26,7 @@ def get_mappers(blocks: Sequence[str]):
         mappers_list.append(mapper_tuple)
 
     return tuple(mappers_list)
+
 
 def get_lowest_location(almaniac: str):
     blocks = almaniac.split("\n\n")
